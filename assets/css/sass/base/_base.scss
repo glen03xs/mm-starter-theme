@@ -7,15 +7,26 @@ html {
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	color: $color-text;
-    font: #{$base-font-size}/#{$baseline} $font-1;
+  font: #{$base-font-size}/#{$baseline} $font-1;
 }
 
 
 /*-------------- Typography --------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
 /** Heading **/
 h1,
 h2,
@@ -23,8 +34,8 @@ h3,
 h4,
 h5,
 h6 {
-    color: $color-text;
-	font-family: $font-1;
+  color: $color-header;
+	font-family: $font-2;
 	font-weight: normal;
 	clear: both;
 }
@@ -32,7 +43,7 @@ h6 {
 h1 {
     font-size: 3rem;
     line-height: 3.25rem;
-	font-weight: bold;
+		font-weight: bold;
 }
 
 h2 {
@@ -64,48 +75,53 @@ h6 {
 
 
 p {
-    margin-bottom: 1.25em;
-    line-height: 1.10em;
+    margin-bottom: 1.25rem;
+    line-height: 1.10rem;
 }
 
 /** Link **/
-
 a {
 	color: $color-link;
 
 	&:hover {
 		color: $color-link-hover;
-		@include transition (all, .4s, ease-out);
-        text-decoration: none;
-        cursor: pointer;
-    }
-    
-    &:visited {
-        color: inherit;
-    }
+			@include transition (all, .4s, ease-out);
+      text-decoration: none;
+      cursor: pointer;
+   }
+
+  &:visited {
+    color: purple;
+	}
+
+	&:focus, &:active {
+		color: midnightblue;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover &:active {
+		outline: 0;
+	}
+
 }
 
 blockquote {
 	color: #000;
-	margin: 0;
-
-	cite {
-		font-size: 1.5rem;
-
-		&:before {
-			content: "- ";
-		}
-	}
+	margin: 0 1.5rem;
 }
 
 dfn,
 cite,
-em{
+em,
+i{
 	font-style: italic;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 }
 
 pre {
@@ -114,10 +130,10 @@ pre {
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
-	margin-bottom: 1.6em;
+	margin-bottom: 1.6rem;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1.6rem;
 }
 
 code,
@@ -145,16 +161,6 @@ big {
 	font-size: 125%;
 }
 
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
-}
 
 /*--------------------------------------------------------------
 # Elements
@@ -163,12 +169,12 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 }
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5rem 1.5rem;
 }
 
 ul {
@@ -182,7 +188,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1.5rem;
 }
 
 dt {
@@ -190,7 +196,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 1.5rem 1.5rem;
 }
 
 img {
@@ -199,11 +205,11 @@ img {
 }
 
 figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+	margin: 1rem 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 	width: 100%;
 }
 
@@ -222,7 +228,7 @@ input[type="submit"] {
 	font-size: 12px;
 	font-size: 0.75rem;
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: .6rem 1rem .4rem;
 }
 
 button:hover,

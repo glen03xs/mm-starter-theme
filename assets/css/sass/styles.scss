@@ -12,13 +12,22 @@ Author URI: glennepomuceno.com
 @import "utilities/utilities";
 
 /*-------------- Base --------------*/
+@import "base/wp_s-base";
 @import "base/bootstrap";
 @import "base/base";
 @import "base/ie8";
-@import "base/flaticon";
+// @import "base/flaticon";
 
 /*-------------- Fonts --------------*/
 // @import "fonts/font-name";
+
+/*-------------- Modules --------------*/
+@import "modules/accessibility";
+@import "modules/btn";
+@import "modules/dividers";
+@import "modules/forms";
+@import "modules/tables";
+@import "modules/misc";
 
 /*-------------- Layout --------------*/
 @import "layout/nav";
@@ -38,12 +47,7 @@ Author URI: glennepomuceno.com
 /*-------------- Parts --------------*/
 @import "parts/template-part";
 
-/*-------------- Modules --------------*/
-@import "modules/btn";
-@import "modules/dividers";
-@import "modules/forms";
-@import "modules/tables";
-@import "modules/misc";
+
 
 /*-------------- Themes --------------*/
 @import "theme/theme"

@@ -4,17 +4,18 @@
 
  /*-------------- Typography --------------*/
 $base-font-size: 16px;
-$font-1: "Lato", Helvetica, Arial, sans-serif;
-$font-2: "Noto Sans", Helvetica, serif;
+$font-1: "Montserrat", Helvetica, Arial, sans-serif; // Main Font
+$font-2: "Source Sans Pro", Helvetica, serif; // Heading
 
 $baseline: $base-font-size * 1.5;
 
 
 /*-------------- Colors --------------*/
-$color-link: #4183c4;
-$color-link-hover: #333;
+$color-link: royalblue;
+$color-link-hover: midnightblue;
 
 $color-text: #333;
+$color-header: rgb(39, 38, 38);
 $color-light-text: #777;
 
 $color-hr: #eee;
