@@ -1,0 +1,32 @@
+ /* ---------------------------------------------------------------------------------------
+  Utilities
+ * --------------------------------------------------------------------------------------*/
+
+ .text-left {
+     text-align: left;
+ }
+
+ .text-right {
+     text-align: right;
+ }
+
+ .text-center {
+     text-align: center;
+ }
+
+ .inline-list {
+    list-style: none;
+    padding-left: 0;
+
+     li {
+         display: inline;
+     }
+ }
+
+ @mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how; /* Chrome10+,Safari5.1+ */
+    -moz-transition:    $what $time $how; /* FF3.6+ */
+    -ms-transition:     $what $time $how; /* IE10+ */
+    -o-transition:      $what $time $how; /* Opera 11.10+ */
+    transition:         $what $time $how; /* Old browsers */
+}

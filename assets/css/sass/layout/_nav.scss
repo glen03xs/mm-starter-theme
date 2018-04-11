@@ -1,0 +1,19 @@
+ /* ---------------------------------------------------------------------------------------
+  Nav Styles
+ * --------------------------------------------------------------------------------------*/
+.navbar {
+    padding-top: 24px;
+}
+
+
+.custom-navbar {
+     background: transparent;
+     border-width: 0;
+     @include transition($what: all, $time: .4s, $how: ease-in-out);
+}
+
+.main-menu {
+    text-transform: uppercase;
+    float: right;
+}
+

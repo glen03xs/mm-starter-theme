@@ -1,0 +1,294 @@
+/* -----------------------------------------------------------
+*  Base Styles
+* ----------------------------------------------------------*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	color: $color-text;
+    font: #{$base-font-size}/#{$baseline} $font-1;
+}
+
+
+/*-------------- Typography --------------*/
+/** Heading **/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-text;
+	font-family: $font-1;
+	font-weight: normal;
+	clear: both;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+	font-weight: bold;
+}
+
+h2 {
+    font-size: 2.625rem;
+    line-height: 2.75rem;
+
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}
+
+h4 {
+    font-size: 1.625rem;
+    line-height: 1.72rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.35rem;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.1rem;
+}
+
+
+p {
+    margin-bottom: 1.25em;
+    line-height: 1.10em;
+}
+
+/** Link **/
+
+a {
+	color: $color-link;
+
+	&:hover {
+		color: $color-link-hover;
+		@include transition (all, .4s, ease-out);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    &:visited {
+        color: inherit;
+    }
+}
+
+blockquote {
+	color: #000;
+	margin: 0;
+
+	cite {
+		font-size: 1.5rem;
+
+		&:before {
+			content: "- ";
+		}
+	}
+}
+
+dfn,
+cite,
+em{
+	font-style: italic;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
+
