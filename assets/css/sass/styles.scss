@@ -1,9 +1,9 @@
 /* -------------------------------------------------------------------------------------/*
 style.scss
 
-Glen Nepomuceno CSS framework
+MM Starter Theme
 Version: 1.0
-Author URI: glennepomuceno.com
+Author URI: iamglen.me
 /* -------------------------------------------------------------------------------------*/
 
 
@@ -30,10 +30,11 @@ Author URI: glennepomuceno.com
 @import "modules/misc";
 
 /*-------------- Layout --------------*/
+@import "layout/main";
+@import "layout/widgets";
 @import "layout/nav";
 @import "layout/header";
 @import "layout/homepage";
-@import "layout/main";
 @import "layout/footer";
 @import "layout/sidebar";
 
